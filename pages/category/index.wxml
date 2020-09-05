@@ -1,0 +1,51 @@
+<view class="category">
+    <!-- 搜索框开始 -->
+    <searchInput></searchInput>
+    <!-- 搜索框结束 -->
+
+    <!-- 分类内容开始 -->
+    <view class="category_content">
+        <!-- 左侧分类开始 -->
+        <scroll-view class="left" scroll-y>
+            <view
+                wx:for="{{leftList}}"
+                wx:key="index"
+                bindtap="handleItemTap"
+                data-index="{{index}}"
+            >   
+                <text class="{{index===currentIndex?'active':''}}">{{item}}</text>
+            </view>      
+        </scroll-view>
+        <!-- 左侧分类结束 -->
+
+        <!-- 右侧分类开始 -->
+        <scroll-view class="right" scroll-y scroll-top="{{scrollTop}}">
+            <view 
+                wx:for="{{rightList}}"
+                wx:key="cat_id"
+            >   
+                <!-- 右侧标题 -->
+                <view class="right_title">
+                    <text class="iconfont .icon-jiantou" ></text>
+                    <text>{{item.cat_name}}</text>
+                    <text class="iconfont .icon-fanhui" ></text>
+                </view>
+
+                <!-- 右侧分类明细 -->
+                <navigator 
+                    class="right_list"
+                    wx:for="{{item.children}}"
+                    wx:key="cat_id"
+                    url="/pages/goods_list/index?cid={{item.cat_id}}"
+                >
+                    <image src="{{item.cat_icon}}" mode="widthFix"></image>
+                    <text>{{item.cat_name}}</text>
+                </navigator>  
+            </view>
+              
+        </scroll-view>
+        <!-- 右侧分类结束 -->
+    </view>
+    <!-- 分类内容结束   -->
+</view>
+  

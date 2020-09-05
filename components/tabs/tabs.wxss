@@ -1,0 +1,15 @@
+.tabs{
+    display: flex;
+}
+.tabs{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 35rpx;
+    line-height: 80rpx;
+}
+.active{
+    color: red;
+    border-bottom: red 5rpx solid;
+}

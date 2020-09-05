@@ -1,0 +1,38 @@
+<view class="goods_list">
+    <searchInput></searchInput>
+    <!-- tab内容 -->
+    <tabs tabs="{{tabs}}" bind:tabsIndexChange="activeIndex"></tabs>
+
+    <block>
+        <view class="tabs_one">
+            <!-- 商品详情 -->
+            <navigator class="goods_item"
+                wx:for="{{goodList}}"
+                wx:key="goods_id"
+                wx:if="{{item.goods_small_logo}}"
+                url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+            > 
+                <!-- 左侧商品图片 -->
+                <view class="goods_left">
+                    <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+                </view>
+
+                <!-- 右侧商品详情 -->
+                <view class="goods_right">
+                    <!-- 商品名称 -->
+                    <view class="goods_name">
+                       {{item.goods_name}}
+                    </view>
+                      
+                    <!-- 商品价格 -->
+                    <view class="goods_price">
+                        ￥{{item.goods_price}}
+                    </view>                   
+                </view>
+            </navigator>
+              
+        </view>
+          
+    </block>
+</view>
+  

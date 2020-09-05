@@ -1,0 +1,121 @@
+.cart_address{
+    .address_detail{
+        position: relative;
+        height:160rpx;
+        border-bottom: darkgray 2rpx solid;
+        padding: 25rpx;
+        .icon-dizhi-copy{
+            position: absolute;
+            line-height: calc(200rpx - 90rpx) ;
+            font-size: 55rpx;
+            color: var(--themeColor2);
+        }
+        .address_name{
+            display: inline-block;
+            padding-left:90rpx;
+            font-size: 35rpx;
+        }
+        .address_num{
+            display: inline-block;
+            padding-left: 20rpx;
+            font-size: 30rpx;
+            color: rgb(158, 158, 158);
+        }
+        .address_all{
+            padding-top: 15rpx;
+            font-size: 35rpx;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-left: 90rpx;
+
+        }
+    }
+    .address_btn{
+        padding: 35rpx 0;
+        border-bottom: darkgray 2rpx solid;
+       
+    }
+}
+
+.cart_content {
+    padding-bottom: 90rpx;
+    .goods_all {
+
+        .goods_item {
+            display: flex;
+            align-items: center;
+            position: relative;
+            height: 200rpx;
+            margin-bottom: 25rpx;
+
+            .goods_img {
+                flex: 2;
+            }
+
+            .goods_right {
+                flex: 6;
+                font-size: 25rpx;
+                .goods_name {
+                    padding: 0 18rpx;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                }
+
+                .goods_price {
+                    color: var(--price);
+                    padding: 25rpx 0 0 25rpx;
+                    font-size: 35rpx;
+                }
+
+                .goods_num {
+                    position: absolute;
+                    right: 20rpx;
+                    bottom: 0;
+
+                    .num{
+                        display: inline-block;
+                        width: 43rpx;
+                        text-align: center;
+
+                    }
+
+                }
+            }
+            
+        }
+    }
+
+    .cart_bottom{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        align-items: center;
+        height: 90rpx;
+        background-color: #fafafa;
+        padding: 20rpx;
+
+        .total{
+            float: right;
+            font-size: 35rpx;
+            padding: 0 25rpx;
+            text{
+                color: var(--price);
+                font-size: 25rpx;
+            }
+        }
+        .pay{
+            color: white;
+            width: 115rpx;
+            height: 60rpx;
+            line-height: 60rpx;
+            border-radius: 35rpx;
+            text-align: center;
+            background-color: var(--price);
+            float: right;
+            font-size: 30rpx;
+        }
+    }
+  }

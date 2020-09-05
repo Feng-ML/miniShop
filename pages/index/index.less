@@ -1,0 +1,51 @@
+.home{
+    swiper{
+        height: 340rpx;
+        swiper-item{
+            image{
+                width: 100%;
+            }
+        }
+    }
+    .cat{
+        width: 100%;
+        height: calc(140/128*0.25*750rpx);
+        navigator{
+            float: left;
+            width: 25%;
+            height: 100%;
+            image{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .floor{
+        margin-top: 25rpx;
+        width: 100%;
+        .floor_title{
+            margin-top: 15rpx;
+            width: 100%;
+            height: 59rpx;
+            image{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .floor_product{
+            overflow: hidden;
+            image{
+                float: left;
+                width: 32%;
+            }
+            image:nth-last-child(-n+4){
+                height: calc(386/232*0.317*750*0.5rpx);
+                border-left: white 5px solid;
+                
+            }
+            image:nth-child(2),image:nth-child(3){
+                border-bottom: white 5px solid;
+            }
+        }
+    }
+}

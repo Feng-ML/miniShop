@@ -1,0 +1,56 @@
+<view class="cart_address">
+    <view class="address_detail" wx:if="{{address.userName}}">
+        <view class="iconfont icon-dizhi-copy"></view>
+        <view class="address_name">{{address.userName}}</view>
+        <view class="address_num">{{address.telNumber}}</view>
+        <view class="address_all">{{address.all}}</view>
+    </view>
+    <view class="address_btn" wx:else>
+        <button type="default" bind:tap="handleAddless">获取收货地址</button>
+    </view>
+</view>
+
+<view class="cart_content">
+
+    <!-- 商品列表 -->
+    <view class="goods_all">
+        
+            <view 
+                class="goods_item" 
+                wx:for="{{paytList}}"
+                wx:key="goods_id"
+            >
+                <!-- 商品图片 -->
+                <image class="goods_img" src="{{item.pics[0].pics_sma}}" mode="widthFix"/>
+
+                <!-- 商品右侧明细 -->
+                <view class="goods_right">
+                    <!-- 商品名称 -->
+                    <view class="goods_name">{{item.goods_name}}</view>
+                    <view class="goods_price">￥{{item.goods_price}}</view>
+                    <!-- 商品数量 -->
+                    <view class="goods_num">
+                        
+                        <view class="num">×{{item.num}}</view>
+                        
+                    </view>
+                </view>  
+
+            </view>           
+        
+    </view>
+
+    <!-- 底部结算 -->
+    <view class="cart_bottom">
+
+        <view class="pay" bind:tap="handlePay">支付</view>   
+            
+        <!-- 合计价钱 -->
+        <view class="total">
+            合计：<text>￥{{total}}</text>
+        </view>
+
+    </view>
+
+</view>
+

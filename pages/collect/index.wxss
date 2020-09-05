@@ -1,0 +1,25 @@
+.collect .goods_item {
+  width: 100%;
+  display: flex;
+  margin-bottom: 35rpx;
+}
+.collect .goods_item .goods_left {
+  flex: 2;
+}
+.collect .goods_item .goods_left image {
+  width: 100%;
+}
+.collect .goods_item .goods_right {
+  position: relative;
+  flex: 4;
+  padding: 30rpx;
+}
+.collect .goods_item .goods_right .goods_name {
+  font-size: 35rpx;
+}
+.collect .goods_item .goods_right .goods_price {
+  position: absolute;
+  bottom: 0;
+  right: 30rpx;
+  color: #ff5000;
+}

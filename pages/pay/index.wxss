@@ -1,0 +1,103 @@
+.cart_address .address_detail {
+  position: relative;
+  height: 160rpx;
+  border-bottom: darkgray 2rpx solid;
+  padding: 25rpx;
+}
+.cart_address .address_detail .icon-dizhi-copy {
+  position: absolute;
+  line-height: calc(110rpx);
+  font-size: 55rpx;
+  color: var(--themeColor2);
+}
+.cart_address .address_detail .address_name {
+  display: inline-block;
+  padding-left: 90rpx;
+  font-size: 35rpx;
+}
+.cart_address .address_detail .address_num {
+  display: inline-block;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: #9e9e9e;
+}
+.cart_address .address_detail .address_all {
+  padding-top: 15rpx;
+  font-size: 35rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 90rpx;
+}
+.cart_address .address_btn {
+  padding: 35rpx 0;
+  border-bottom: darkgray 2rpx solid;
+}
+.cart_content {
+  padding-bottom: 90rpx;
+}
+.cart_content .goods_all .goods_item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 200rpx;
+  margin-bottom: 25rpx;
+}
+.cart_content .goods_all .goods_item .goods_img {
+  flex: 2;
+}
+.cart_content .goods_all .goods_item .goods_right {
+  flex: 6;
+  font-size: 25rpx;
+}
+.cart_content .goods_all .goods_item .goods_right .goods_name {
+  padding: 0 18rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.cart_content .goods_all .goods_item .goods_right .goods_price {
+  color: var(--price);
+  padding: 25rpx 0 0 25rpx;
+  font-size: 35rpx;
+}
+.cart_content .goods_all .goods_item .goods_right .goods_num {
+  position: absolute;
+  right: 20rpx;
+  bottom: 0;
+}
+.cart_content .goods_all .goods_item .goods_right .goods_num .num {
+  display: inline-block;
+  width: 43rpx;
+  text-align: center;
+}
+.cart_content .cart_bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  height: 90rpx;
+  background-color: #fafafa;
+  padding: 20rpx;
+}
+.cart_content .cart_bottom .total {
+  float: right;
+  font-size: 35rpx;
+  padding: 0 25rpx;
+}
+.cart_content .cart_bottom .total text {
+  color: var(--price);
+  font-size: 25rpx;
+}
+.cart_content .cart_bottom .pay {
+  color: white;
+  width: 115rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 35rpx;
+  text-align: center;
+  background-color: var(--price);
+  float: right;
+  font-size: 30rpx;
+}

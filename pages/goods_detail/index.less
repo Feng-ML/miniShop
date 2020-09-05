@@ -1,0 +1,92 @@
+.goods_detail{
+    padding-bottom: 110rpx;
+    swiper{
+        height: 30vh;   
+        text-align: center;  
+        image{
+            height: 100%;
+            margin: auto;
+        } 
+    }
+    .goods_price{
+        color: var(--price);
+        padding: 25rpx;
+    }
+    .goods_top{
+        display: flex;
+        .goods_name{
+            flex: 5;
+            padding: 0 45rpx;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            font-size: 35rpx;
+            font-weight: 999;
+        }
+        .goods_shoucang{
+            flex:1;
+            text-align: center;
+            font-size: 35rpx;
+        }
+        .icon-xin{
+            color: red;
+            view{
+                color: black;
+            }
+        }
+    }
+    .goods_pics_detail{
+        padding-top: 35rpx;
+    }
+
+}
+
+.bottom{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 110rpx;
+    background-color: var(--themeColor);
+    color: white;
+    text-align: center;
+    .left{
+        flex: 1;
+        padding: 15rpx;
+        font-size: 30rpx;
+    }
+    .right{
+        flex: 2;
+        line-height: 110rpx;
+        font-size: 35rpx;
+    }
+    .contact{
+        position: relative;
+        button{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+    }
+    .share{
+        position: relative;
+        button{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+    }
+    .add_cart{
+        background-color: var(--themeColor2);
+    }
+    .buy{
+        background-color: var(--price);
+    }
+}

@@ -1,0 +1,124 @@
+.user{
+    background-color: #f1f1f1;
+    height: 100vh;
+    .user_top{
+        position: relative;
+        padding-top: 25vw;
+        .back{
+            position: absolute;
+            left: -50vw;
+            top: -75vw;
+            width: 200vw;
+            height: 100vw;
+            background-color: var(--themeColor);
+            border-radius: 50%;
+        }
+        .login{
+            transform: translateY(-95rpx);
+            padding-top: 55rpx;
+            button{
+                background-color: white;
+                width: 195rpx;
+                border-radius: 55rpx;
+            }
+        }
+        .userInfo{
+            padding: 0 40vw;
+            text-align: center;
+            transform: translateY(-75rpx);
+            image{
+                border-radius: 50%;
+                width: 150rpx;
+                height: 150rpx;
+                
+            }
+        }
+    }
+
+    .user_content{
+        padding: 0 15rpx;
+        .top{
+            display: flex;
+            text-align: center;
+            transform: translateY(-35rpx);
+            .item{
+                flex: 1;
+            }
+            .num{
+                color: var(--price);
+            }
+            .text{
+                font-size: 25rpx;
+            }
+            // .collect{
+            //     flex: 1;
+            // }
+            // .follow{
+            //     flex: 1;
+
+            // }
+            // .footprint{
+            //     flex: 1;
+
+            // }
+            // .voucher{
+            //     flex: 1;
+
+            // }
+        }
+
+        .my_order{
+            display: flex;
+            flex: auto;
+            flex-wrap: wrap;
+            text-align: center;
+            background-color: white;
+            border-radius: 35rpx;
+            font-size: 25rpx;
+            .order_title{
+                width: 100%;
+                text-align: left;
+                padding: 15rpx 25rpx;
+                font-weight: 999;
+            }
+            .iconfont{
+                font-size: 45rpx;
+                color: var(--price);
+            }
+            .item{
+                flex: 1;
+                padding-bottom: 15rpx;
+            }
+            // .all_order{
+            //     flex: 1;
+            // }
+            // .wait_pay{
+            //     flex: 1;
+            // }
+            // .wait_receipt{
+            //     flex: 1;
+            // }
+            // .refund{
+            //     flex: 1;
+            // }
+        }
+
+        .other{
+            margin-top: 45rpx;
+            view{
+                background-color: white;
+                padding: 25rpx;
+                margin-bottom: 15rpx;
+                border-radius: 15rpx;
+                font-size: 30rpx;
+                text{
+                    float: right;
+                    color: #9e9e9e;
+                }
+                .iconfont{
+                    font-size: 45rpx;
+                }
+            }
+        }
+    }
+}

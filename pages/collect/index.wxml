@@ -1,0 +1,26 @@
+<view class="collect">
+    <!-- 商品详情 -->
+    <navigator class="goods_item"
+        wx:for="{{collect}}"
+        wx:key="goods_id"
+        url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+    > 
+        <!-- 左侧商品图片 -->
+        <view class="goods_left">
+            <image src="{{item.pics[0].pics_sma}}" mode="widthFix"></image>
+        </view>
+
+        <!-- 右侧商品详情 -->
+        <view class="goods_right">
+            <!-- 商品名称 -->
+            <view class="goods_name">
+                {{item.goods_name}}
+            </view>
+                
+            <!-- 商品价格 -->
+            <view class="goods_price">
+                ￥{{item.goods_price}}
+            </view>                   
+        </view>
+    </navigator>
+</view>

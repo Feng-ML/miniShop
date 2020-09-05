@@ -1,0 +1,79 @@
+<view class="cart_address">
+    <view class="address_detail" wx:if="{{address.userName}}">
+        <view class="iconfont icon-dizhi-copy"></view>
+        <view class="address_name">{{address.userName}}</view>
+        <view class="address_num">{{address.telNumber}}</view>
+        <view class="address_all">{{address.all}}</view>
+    </view>
+    <view class="address_btn" wx:else>
+        <button type="default" bind:tap="handleAddless">获取收货地址</button>
+    </view>
+</view>
+
+<!-- 购物车为空时 -->
+<block wx:if="{{cartList.length===0}}">
+    <view class="cart_null">
+        <image src="../../img/cart_null.jpg" mode="widthFix"/>
+    </view>
+</block>
+
+
+<!-- 购物车不为空时 -->
+<block wx:else>
+    <view class="cart_content">
+        <!-- 商品列表 -->
+        <view class="goods_all">
+            <checkbox-group bindchange="checkboxChange">
+                <view 
+                    class="goods_item" 
+                    wx:for="{{cartList}}"
+                    wx:key="goods_id"
+                >
+                        
+                    <!-- 复选框 -->
+                    <checkbox value="{{index}}" checked="{{item.check}}"></checkbox>
+    
+                    <!-- 商品图片 -->
+                    <image class="goods_img" src="{{item.pics[0].pics_sma}}" mode="widthFix"/>
+    
+                    <!-- 商品右侧明细 -->
+                    <view class="goods_right">
+                        <!-- 商品名称 -->
+                        <view class="goods_name">{{item.goods_name}}</view>
+                        <view class="goods_price">￥{{item.goods_price}}</view>
+                        <!-- 商品数量 -->
+                        <view class="goods_num">
+                            <view class="btn" bind:tap="handleMinus" data-index="{{index}}">-</view>
+                            <view class="num">{{item.num}}</view>
+                            <view class="btn" bind:tap="handleAdd" data-index="{{index}}">+</view>
+                        </view>
+                    </view>  
+    
+                </view>           
+            </checkbox-group>
+        </view>
+    
+        <!-- 底部结算 -->
+        <view class="cart_bottom">
+            <!-- 全选按钮 -->
+            <view class="checkAll">
+                <checkbox
+                    bind:tap="checkboxAll" 
+                    checked="{{isCheckboxAll}}" 
+                ></checkbox>
+                全选
+            </view>
+                
+            <view class="pay" bind:tap="toPay">结算</view>   
+                     
+            <!-- 合计价钱 -->
+            <view class="total">
+                合计：<text>￥{{total}}</text>
+            </view>
+    
+        </view>
+      
+
+    </view>
+</block>
+

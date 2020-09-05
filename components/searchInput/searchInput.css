@@ -1,0 +1,8 @@
+.searchInput {
+  height: 90rpx;
+  background-color: var(--themeColor);
+}
+.searchInput navigator {
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,13 @@
+<view class="tabs">
+  <!-- tab标题 -->
+  <view 
+    class="tabs {{item.isActive?'active':''}}"
+    wx:for="{{tabs}}"
+    wx:key="id"
+    bind:tap="handleIndex"
+    data-index='{{index}}'
+  >
+    {{item.value}}
+  </view>
+    
+</view>

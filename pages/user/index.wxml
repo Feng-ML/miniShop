@@ -1,0 +1,73 @@
+<view class="user">
+
+    <!-- 头部信息 -->
+    <view class="user_top">
+        <view class="back"></view>
+        <!-- 已登录 -->
+        <block wx:if="{{userInfo}}">
+            <view class="userInfo">
+                <image src="{{userInfo.avatarUrl}}"/>
+                <view>{{userInfo.nickName}}</view>
+            </view>    
+        </block>
+        <!-- 未登录 -->
+        <block wx:else>
+            <view class="login">
+                <button open-type="getUserInfo" bindgetuserinfo="handleLogin">登录</button>
+            </view>    
+        </block>
+    </view>
+    
+    <view class="user_content">
+        <!-- 顶部信息 -->
+        <view class="top">
+            <view class="item">
+                <navigator url="../collect/index">
+                    <view class="num">{{collectNum}}</view>
+                    <view class="text">收藏夹</view>
+                </navigator>
+            </view>
+              
+            <view class="item">
+                <view class="num">0</view>
+                <view class="text">关注店铺</view>
+            </view>
+            <view class="item">
+                <view class="num">0</view>
+                <view class="text">我的足迹</view>
+            </view>
+            <view class="item">
+                <view class="num">0</view>
+                <view class="text">卡券</view>
+            </view>
+        </view>
+
+        <!-- 我的订单 -->
+        <view class="my_order">
+            <view class="order_title">我的订单</view>
+            <view class="item">
+                <view class="iconfont icon-order"></view>
+                <view>全部订单</view>
+            </view>
+            <view class="item">
+                <view class="iconfont icon-daifukuan"></view>
+                <view>待付款</view>
+            </view>
+            <view class="item">
+                <view class="iconfont icon-daishouhuo"></view>
+                <view>待收货</view>
+            </view>
+            <view class="item">
+                <view class="iconfont icon-xinlingshouyewuicon--"></view>
+                <view>退款/退货</view>
+            </view>
+        </view>
+
+        <view class="other">
+            <view>联系客服<text>400-618-4000</text></view>
+            <view>意见反馈<text class="iconfont icon-jiantou"></text></view>
+            <view>关于我们<text class="iconfont icon-jiantou"></text></view>
+        </view>
+    </view>
+
+</view>
